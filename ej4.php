@@ -3,7 +3,7 @@
      * Modifica la página inicial realizada, incluyendo una imagen de cabecera en función de la estación del
      * año en la que nos encontremos y un color de fondo en función de la hora del día.
      * 
-     * @version 1.0.0
+     * @version 1.0.1
      * @since 27-09-2023
      * @author Andrés <a19camoan@iesgrancapitan.org>
      */
@@ -22,24 +22,23 @@
         $age--;
     }
 
-    if ($currentMonth >= 3 && $currentMonth <= 5) {
-        $season = "primavera";
-    } elseif ($currentMonth >= 6 && $currentMonth <= 8) {
+    $season = "primavera";
+    if ($currentMonth >= 6 && $currentMonth < 9) {
         $season = "verano";
-    } elseif ($currentMonth >= 9 && $currentMonth <= 11) {
+    } elseif ($currentMonth >= 9 && $currentMonth < 12) {
         $season = "otoño";
-    } else {
+    } elseif ($currentMonth >= 12 || $currentMonth < 3) {
         $season = "invierno";
     }
 
     # 3 tramos horarios: mañana, tarde, noche.
     $currentHour = date("H");
-    if ($currentHour >= 7 && $currentHour <= 12) {
-        $time = "#9ec3ff#";
-    } elseif ($currentHour >= 13 && $currentHour <= 21) {
+    $time = "#a490fc";
+
+    if ($currentHour >= 7 && $currentHour < 12) {
+        $time = "#9ec3ff";
+    } elseif ($currentHour >= 12 && $currentHour < 20) {
         $time = "#fcff9e";
-    } else {
-        $time = "#a490fc";
     }
 ?>
 
@@ -54,10 +53,8 @@
 
 <body>
 
-    <header style="background-image: url(./img/<?php echo "$season.jpg)" ?>">
-        <h1>Estación:
-            <?php echo "$season" ?>
-        </h1>
+    <header style="padding: 5%; background-image: url(./img/<?php echo "$season.jpg)" ?>;">
+        <h1>Estación: <?php echo "$season" ?></h1>
     </header>
 
     <main style="background-color: <?php echo "$time" ?>;">
