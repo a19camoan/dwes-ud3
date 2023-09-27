@@ -11,13 +11,13 @@
     $month = 9;
     $year = 2000;
 
-    $actualDay = date("d");
-    $actualMonth = date("m");
-    $actualYear = date("Y");
+    $currentDay = date("d");
+    $currentMonth = date("m");
+    $currentYear = date("Y");
 
-    $age = $actualYear - $year;
+    $age = $currentYear - $year;
 
-    if ($actualMonth < $month || ($actualMonth == $month && $actualDay < $days)) {
+    if ($currentMonth < $month || ($currentMonth == $month && $currentDay < $days)) {
         $age--;
     };
 
