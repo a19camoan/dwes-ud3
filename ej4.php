@@ -21,7 +21,6 @@
     if ($currentMonth < $month || ($currentMonth == $month && $currentDay < $days)) {
         $age--;
     }
-    ;
 
     if ($currentMonth >= 3 && $currentMonth <= 5) {
         $season = "primavera";
@@ -32,7 +31,6 @@
     } else {
         $season = "invierno";
     }
-    ;
 
     # 3 tramos horarios: mañana, tarde, noche.
     $currentHour = date("H");
