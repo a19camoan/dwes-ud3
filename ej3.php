@@ -19,7 +19,7 @@
 
     if ($currentMonth < $month || ($currentMonth == $month && $currentDay < $days)) {
         $age--;
-    };
+    }
 
     echo "<p>Tienes " . $age . " años.</p>";
 
