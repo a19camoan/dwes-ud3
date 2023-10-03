@@ -4,44 +4,28 @@
      * que le corresponde. Cada celda será un enlace a una página que mostrará un fondo de
      * pantalla con el color seleccionado. ¿Puedes hacerlo con los conocimientos que tienes?
      *
-     * @version 1.0.0
+     * @version 1.0.1
      * @since 02-10-2023
      * @author Andrés <a19camoan@iesgrancapitan.org>
-     * @todo Hacerlo
      */
 
-    # 6 colores aleatorios
-    $color1 = "fff";
-    $color2 = "ccc";
-    $color3 = "999";
-    $color4 = "666";
-    $color5 = "333";
-    $color6 = "000";
-
     # Creamos la tabla
-    echo $topTable = <<<TOP
-        <table border='1'>
-            <tr>
-                <th>Color</th>
-                <th>Valor hexadecimal</th>
-            </tr>
-        TOP;
+    echo "<table border='1'>";
 
-    # Creamos las filas
-    for ($i = 0; $i < 6; $i++) {
+    # Saltos de 64 para ir sacando colores y generar la tabla con todos los números de 0 a 255 a saltos de 64
+    $step = 51;
+
+    for ($i = 0; $i <= 255; $i += $step) {
         echo "<tr>";
-
-        # Creamos las columnas
-        for ($j = 0; $j < 2; $j++) {
-            if ($j == 0) {
-                echo "<td style=\"background-color: #$color3\"></td>";
-            } else {
-                echo "<td>#$color3</td>";
+        for ($j = 0; $j <= 255; $j += $step) {
+            for ($k = 0; $k <= 255; $k += $step) {
+                echo "<td style='background-color: rgb($i, $j, $k);'><a href='#'>#" . dechex($i) . dechex($j) . dechex($k) . "</a></td>";
             }
         }
-
         echo "</tr>";
     }
     echo "</table>";
+
+    echo "<p>No se puede crear la página al hacer click en el enlace porque no se puede hacer con los conocimientos que tengo</p>";
 
     echo "<a href='github.com/a19camoan/dwes-ud3' target='_blank'>Repositorio</a>";
