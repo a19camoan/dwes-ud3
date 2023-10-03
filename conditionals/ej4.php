@@ -59,7 +59,7 @@
 
     <main style="background-color: <?php echo "$time" ?>;">
         <p>Tienes <?= $age ?> años.</p>
-        <a href="github.com/a19camoan/dwes-ud3" target='_blank'>Repositorio</a>
+        <a href="https://github.com/a19camoan/dwes-ud3" target='_blank'>Repositorio</a>
     </main>
 </body>
 

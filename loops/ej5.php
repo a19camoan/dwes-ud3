@@ -69,4 +69,4 @@
     }
     echo "</table>";
 
-    echo "<a href='github.com/a19camoan/dwes-ud3' target='_blank'>Repositorio</a>";
+    echo "<a href='https://github.com/a19camoan/dwes-ud3' target='_blank'>Repositorio</a>";

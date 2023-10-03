@@ -28,4 +28,4 @@
 
     echo "<p>No se puede crear la página al hacer click en el enlace porque no se puede hacer con los conocimientos que tengo</p>";
 
-    echo "<a href='github.com/a19camoan/dwes-ud3' target='_blank'>Repositorio</a>";
+    echo "<a href='https://github.com/a19camoan/dwes-ud3' target='_blank'>Repositorio</a>";
