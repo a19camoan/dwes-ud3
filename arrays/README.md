@@ -7,7 +7,7 @@ Definir un array que permita almacenar y mostrar la siguiente información.
 <ol type="a">
   <li>Meses del año</li>
   <li>Tablero para jugar al juego de los barcos.</li>
-  <li>Nota de los alumnos de 2o DAW para el módulo DWES.</li>
+  <li>Nota de los alumnos de 2º DAW para el módulo DWES.</li>
   <li>Verbos irregulares en inglés.</li>
   <li>Información sobre continentes, países, capitales y banderas.</li>
 </ol>
